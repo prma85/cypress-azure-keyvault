@@ -62,13 +62,12 @@ interface GetKeyvaultDataOptions {
   envSuffix?: string; // identifier for the environment (optional)
 }
 
-
 // command return
 interface KeyVaultData {
   envSuffix: string;
   data: {
-    [i: string]: string
-  }
+    [i: string]: string;
+  };
 }
 ```
 

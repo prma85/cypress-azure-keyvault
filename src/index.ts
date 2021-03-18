@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-namespace */
 import { GetKeyvaultDataOptions, KeyVaultData } from "./plugins/azure";
 import "./support";
 
@@ -24,8 +25,7 @@ declare global {
        * @returns Chainable<KeyVaultData>
        *
        */
-       getKeyvaultData(options: GetKeyvaultDataOptions): Chainable<KeyVaultData>;
-
+      getKeyvaultData(options: GetKeyvaultDataOptions): Chainable<KeyVaultData>;
     }
   }
 }

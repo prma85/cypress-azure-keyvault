@@ -1,5 +1,5 @@
-import { DefaultAzureCredential } from '@azure/identity';
-import { SecretClient } from '@azure/keyvault-secrets';
+import { DefaultAzureCredential } from "@azure/identity";
+import { SecretClient } from "@azure/keyvault-secrets";
 
 // DefaultAzureCredential expects the following three environment variables:
 // * AZURE_TENANT_ID: The tenant ID in Azure Active Directory
@@ -18,8 +18,8 @@ export interface GetKeyvaultDataOptions {
 export interface KeyVaultData {
   envSuffix: string;
   data: {
-    [i: string]: string
-  }
+    [i: string]: string;
+  };
 }
 
 function createClient(vault: string) {
@@ -32,13 +32,9 @@ function createClient(vault: string) {
 export async function getKeyvaultData(options: GetKeyvaultDataOptions): Promise<KeyVaultData> {
   const client = createClient(options.vault);
 
-  const {
-    envSuffix = 'development',
-    keys = ['username', 'password'],
-    keyPrefix = null
-  } = options;
+  const { envSuffix = "development", keys = ["username", "password"], keyPrefix = null } = options;
 
-  const secretPromises = keys.map(async (key) => {
+  const secretPromises = keys.map(async key => {
     const secret = await client.getSecret(keyPrefix ? `${keyPrefix}-${key}` : key);
     return [key, secret.value];
   });
