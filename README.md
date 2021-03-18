@@ -1,5 +1,7 @@
 # cypress-azure-keyvault
 
+[![npm version](https://badge.fury.io/js/cypress-azure-keyvault.svg)](https://badge.fury.io/js/cypress-azure-keyvault) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ecb6da0297ea4bf48d71b6096f834691)](https://www.codacy.com/manual/paulo85br/cypress-azure-keyvault?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=prma85/cypress-azure-keyvault&amp;utm_campaign=Badge_Grade)[![Codacy Badge](https://app.codacy.com/project/badge/Grade/80c98201d9d44cedbd999251c609a8f5)](https://www.codacy.com/gh/prma85/cypress-azure-keyvault/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=prma85/cypress-azure-keyvault&amp;utm_campaign=Badge_Grade)
+
 A custom Cypress plugin to access recover keys from Microsoft Azure Key Vaults.
 
 ## Installation
