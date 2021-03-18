@@ -1,0 +1,50 @@
+{
+  "name": "cypress-azure-keyvault",
+  "version": "1.0.0",
+  "description": "A cypress plugin to get data from Azure Keyvaults and set it in the enviroment.",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "/dist",
+    "package.json"
+  ],
+  "scripts": {
+    "prepublishOnly": "yarn clean && yarn build",
+    "build": "tsc -b tsconfig.json",
+    "clean": "npx rimraf dist junit.xml coverage .tsbuildinfo",
+    "test": "exit 0",
+    "lint": "bcs lint --fix",
+    "linc": "bcs linc --fix",
+    "prettier": "bcs prettier write"
+
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prma85/cypress-azure-keyvault.git"
+  },
+  "keywords": [
+    "azure",
+    "cypress",
+    "keyvault"
+  ],
+  "author": "Paulo Andrade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prma85/cypress-azure-keyvault/issues"
+  },
+  "homepage": "https://github.com/prma85/cypress-azure-keyvault#readme",
+  "peerDependencies": {
+    "cypress": ">=4.12.1"
+  },
+  "dependencies": {
+    "@azure/identity": "^1.1.0",
+    "@azure/keyvault-secrets": "^4.1.0"
+  },
+  "devDependencies": {
+    "better-coding-script": "^1.0.2",
+    "cypress": "^5.1.0"
+  }
+}

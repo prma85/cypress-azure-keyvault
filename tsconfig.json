@@ -1,0 +1,65 @@
+{
+  // https://github.com/microsoft/TypeScript-New-Handbook/blob/master/reference/Compiler%20Options.md
+  "compilerOptions": {
+    // Main options
+    "target": "es5",                           // Specify ECMAScript target version: 'es3' (default), 'es5', 'es2015', 'es2016', 'es2017','es2018' or 'esnext'.
+    "module": "commonjs",                     // Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'.
+    "lib": ["esnext", "dom", "scripthost", "dom.iterable", "es2018.promise"], // Specify library files to be included in the compilation.
+    "allowJs": false,                         // Allow javascript files to be compiled.
+    "outDir": "./dist",                       // Redirect output structure to the directory.
+    "rootDir": "./src",                          // Specify the root directory of input files. Use to control the output directory structure with `--outDir`.
+    "composite": true,                        // Enable project compilation: https://www.typescriptlang.org/docs/handbook/project-references.html
+
+    // Strict typechecking options
+    "strict": true,                           // Enable all strict type-checking options.
+    "noImplicitAny": true,                    // Raise error on expressions and declarations with an implied 'any' type.
+    "noImplicitThis": true,                   // Raise error on 'this' expressions with an implied 'any' type.
+    "strictNullChecks": true,                 // In strict null checking mode, the null and undefined values are not in the domain of every type and are only assignable to themselves and any.
+    "alwaysStrict": true,                     // Parse in strict mode and emit "use strict" for each source file.
+
+    // Additional checks
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+    "noUnusedLocals": true,                   // Report errors on unused locals.
+    "noUnusedParameters": true,               // Report errors on unused parameters.
+    "noImplicitReturns": true,                // Report error when not all code paths in function return a value.
+    "noFallthroughCasesInSwitch": true,       // Report errors for fallthrough cases in switch statement.
+    "suppressExcessPropertyErrors": false,    // Suppress excess property checks for object literals.
+    "suppressImplicitAnyIndexErrors": false,  // Suppress noImplicitAny errors for indexing objects lacking index signatures.
+
+    // Module resolution options
+    "moduleResolution": "node",               // Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6).
+    "baseUrl": "./src",                       // Base directory to resolve non-absolute module names.
+    "types": [
+      "cypress",
+      "@azure/logger",
+      "@azure/keyvault-secrets",
+      "@azure/identity"
+    ],                                        // Type declaration files to be included in compilation.
+    "allowSyntheticDefaultImports": true,     // Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
+    "esModuleInterop": true,                  // Emit '__importStar' and '__importDefault' helpers for runtime babel ecosystem compatibility and enable '--allowSyntheticDefaultImports' for typesystem compatibility.
+
+    // Emit options
+    "declaration": true,                      // Generates corresponding '.d.ts' file.
+    "declarationMap": false,                  // Generates a sourcemap for each corresponding '.d.ts' file.
+
+    // Source map options
+    "sourceMap": true,                        // Generates corresponding '.map' file.
+    "tsBuildInfoFile": "./.tsbuildinfo",       // Specify file to store incremental compilation information.
+
+    // JSX options
+    "jsx": "react",                           // Specify JSX code generation: 'preserve', 'react-native', or 'react'.
+
+    // Other options
+    "downlevelIteration": true,               // Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'.
+    "pretty": true                            // Stylize errors and messages using color and context.
+  },
+  "exclude": [
+    "dist",
+    "**/*.test.*",
+    "node_modules",
+    "cypress"
+  ],
+  "include": [
+    "src"
+  ],
+}
