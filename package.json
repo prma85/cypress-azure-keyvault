@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@azure/identity": "^1.1.0",
-    "@azure/keyvault-secrets": "^4.1.0"
+    "@azure/keyvault-secrets": "^4.3.0"
   },
   "devDependencies": {
     "better-coding-script": "^1.0.2",
