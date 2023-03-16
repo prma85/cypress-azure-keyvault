@@ -29,12 +29,19 @@ import "cypress-azure-keyvault";
 And now you need to load the plugin into your `cypress/plugins/index.js`:
 
 ```js
-const { azureKeyvaultPlugin } = require("cypress-azure-keyvault");
+const { azureKeyvaultPlugin } = require("cypress-azure-keyvault/dist/plugins");
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
   return azureKeyvaultPlugin(on, config);
 };
+```
+
+If using typescript, load the plugin into your `cypress/plugins/index.ts`:
+
+```ts
+import { azureKeyvaultPlugin } from  "cypress-azure-keyvault/dist/plugins";
+export default (on, config) => azureKeyvaultPlugin(on, config);
 ```
 
 ### Configure access to Azure Key Vaults
