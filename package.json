@@ -45,6 +45,6 @@
   },
   "devDependencies": {
     "better-coding-script": "^3.0.0",
-    "cypress": "^12.5.1"
+    "cypress": "^12.6.0"
   }
 }
